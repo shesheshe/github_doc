@@ -1,3 +1,15 @@
+=====github 相關指令=========
+
+git config --global user.name "User"
+git config --global user.email "User@github.com"
+所有的倉庫預設使用global的設定, 除非你使用
+git config user.name "User"
+git config user.email "User@github.com"
+來設定當前倉庫的設定.
+
+git config --global alias.st status
+可以縮寫指令
+
 =====github 一主機多帳號=====
 
 windows環境 - win7
@@ -25,17 +37,17 @@ User 		=> 使用者
 IdentityFile=> ssh檔案放置地點
 
 <pre>
-Host usera
-HostName github.com
-User ua
-IdentityFile ~/.ssh/id_rsa
-IdentitiesOnly yes
+	Host usera
+	HostName github.com
+	User ua
+	IdentityFile ~/.ssh/id_rsa
+	IdentitiesOnly yes
 
-Host userb
-HostName github.com
-User ub
-IdentityFile ~/.ssh/id_rsa_ub
-IdentitiesOnly yes
+	Host userb
+	HostName github.com
+	User ub
+	IdentityFile ~/.ssh/id_rsa_ub
+	IdentitiesOnly yes
 </pre>
 
 9. 之後要clone時, 請改成 
