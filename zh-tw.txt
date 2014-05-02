@@ -1,46 +1,86 @@
-=====github ¤@¥D¾÷¦h±b¸¹=====
+=====github ç›¸é—œæŒ‡ä»¤=========
 
-windowsÀô¹Ò - win7
+git config --global user.name "User"
+git config --global user.email "User@github.com"
+æ‰€æœ‰çš„å€‰åº«é è¨­ä½¿ç”¨globalçš„è¨­å®š, é™¤éä½ ä½¿ç”¨
+git config user.name "User"
+git config user.email "User@github.com"
+ä¾†è¨­å®šç•¶å‰å€‰åº«çš„è¨­å®š.
 
-1. «Ø¥ßssh±KÆ_, ssh-keygen -t rsa -C "{§Aªºemil±b¸¹}"
+git config --global alias.st status
+å¯ä»¥ç¸®å¯«æŒ‡ä»¤
+ex: git st
 
-2. ¿é¤J§A­n¦sÀÉªºÀÉ¦W©Î¬O¸ô®|
+=============================
 
-3. ¿é¤J±K½X, ¨â¦¸
+=====github ä¸€ä¸»æ©Ÿå¤šå¸³è™Ÿ=====
 
-4. ¦³¦h±b¸¹, «h­«½Æ1~3.
+windowsç’°å¢ƒ - win7
 
-5. ¨ìgithub©Î¬O¨ä¥LgitªA°È, ¿é¤Jid_rsa.pub¤¤ªºssh-key.
+1. å»ºç«‹sshå¯†é‘°, ssh-keygen -t rsa -C "{ä½ çš„emilå¸³è™Ÿ}"
 
-6. °²¦p¥u¨Ï¥Î¤@­Ó±b¸¹, ¥L·|¥hÅª¨ú C:\Users\{§Aªºµn¤J±b¸¹}\.ssh\id_rsa, ©Î³\§A·Q¨Ï¥Î2­Ó¥H¤W±b¸¹, ½ĞÄ~Äò©¹¤U¬İ.
+2. è¼¸å…¥ä½ è¦å­˜æª”çš„æª”åæˆ–æ˜¯è·¯å¾‘
 
-7. ¦bC:\Users\{§Aªºµn¤J±b¸¹}\.ssh\¤U­±, «Ø¥ßconfigÀÉ®×. (¨S¦³ªşÀÉ¦W
+3. è¼¸å…¥å¯†ç¢¼, å…©æ¬¡
 
-8. ¿é¤J¥H¤U. (³o¶ÈÅã¥Ü¨â²Õ±b¸¹, ¦p»İ§ó¦h, ½Ğ¦Û¦æ·s¼W.
+4. æœ‰å¤šå¸³è™Ÿ, å‰‡é‡è¤‡1~3.
 
-°Ñ¼Æ»¡©ú
-Host 		=> §A¤è«K°O¾Ğªº¦WºÙ
-HostName 	=> ¥Ø¼Ğ¦øªA¾¹
-User 		=> ¨Ï¥ÎªÌ
-IdentityFile=> sshÀÉ®×©ñ¸m¦aÂI
+5. åˆ°githubæˆ–æ˜¯å…¶ä»–gitæœå‹™, è¼¸å…¥id_rsa.pubä¸­çš„ssh-key.
+
+6. å‡å¦‚åªä½¿ç”¨ä¸€å€‹å¸³è™Ÿ, ä»–æœƒå»è®€å– C:\Users\{ä½ çš„ç™»å…¥å¸³è™Ÿ}\.ssh\id_rsa, æˆ–è¨±ä½ æƒ³ä½¿ç”¨2å€‹ä»¥ä¸Šå¸³è™Ÿ, è«‹ç¹¼çºŒå¾€ä¸‹çœ‹.
+
+7. åœ¨C:\Users\{ä½ çš„ç™»å…¥å¸³è™Ÿ}\.ssh\ä¸‹é¢, å»ºç«‹configæª”æ¡ˆ.
+(æ²’æœ‰é™„æª”å. (æœ¬gitåº«å¯ä¸‹è¼‰
+
+8. è¼¸å…¥ä»¥ä¸‹. (é€™åƒ…é¡¯ç¤ºå…©çµ„å¸³è™Ÿ, å¦‚éœ€æ›´å¤š, è«‹è‡ªè¡Œæ–°å¢.
+
+åƒæ•¸èªªæ˜
+Host 		=> ä½ æ–¹ä¾¿è¨˜æ†¶çš„åç¨±
+HostName 	=> ç›®æ¨™ä¼ºæœå™¨
+User 		=> ä½¿ç”¨è€…
+IdentityFile=> sshæª”æ¡ˆæ”¾ç½®åœ°é»
 
 <pre>
-Host usera
-HostName github.com
-User ua
-IdentityFile ~/.ssh/id_rsa
-IdentitiesOnly yes
+	Host usera
+	HostName github.com
+	User ua
+	IdentityFile ~/.ssh/id_rsa
+	IdentitiesOnly yes
 
-Host userb
-HostName github.com
-User ub
-IdentityFile ~/.ssh/id_rsa_ub
-IdentitiesOnly yes
+	Host userb
+	HostName github.com
+	User ub
+	IdentityFile ~/.ssh/id_rsa_ub
+	IdentitiesOnly yes
 </pre>
 
-9. ¤§«á­nclone®É, ½Ğ§ï¦¨ 
+9. ä¹‹å¾Œè¦cloneæ™‚, è«‹æ”¹æˆ 
 <pre>
-	git clone git@usera:us/{±M®×¦WºÙ}.git
+	git clone git@usera:us/{å°ˆæ¡ˆåç¨±}.git
 </pre>
+
+=============================
+
+=====github æ›´æ–°å¾Githubä¸Šforkå‡ºä¾†çš„repository=====
+
+è¼¸å…¥ git remote -v
+
+ä¸€èˆ¬æƒ…æ³
+origin git@usera:ua/zh-tw.git (fetch)
+origin git@usera:ua/zh-tw.git (push)
+
+è¼¸å…¥ git remote add {ä½ çš„branchåç¨±} git@usera:ua/zh-tw.git
+å†è¼¸å…¥ git remote -v
+
+è®Šæˆ
+origin git@usera:ua/zh-tw.git (fetch)
+origin git@usera:ua/zh-tw.git (push)
+{ä½ çš„branchåç¨±} git@usera:ua/zh-tw.git (fetch)
+{ä½ çš„branchåç¨±} git@usera:ua/zh-tw.git (push)
+
+ç¾åœ¨åªè¦è¼¸å…¥
+git fetch {ä½ çš„branchåç¨±}
+
+ç„¶å¾Œmergeå¾Œ, å°±å®Œæˆäº†. (å‡å¦‚æ²’æœ‰ç™¼ç”Ÿè¡çªçš„è©±...
 
 =============================
