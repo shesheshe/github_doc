@@ -1,0 +1,12 @@
+Host {好記的名稱}
+HostName {git主機名稱, 一般是github.com}
+User {使用者名稱}
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+
+# 以下有多帳號再加, 否則刪掉
+Host {好記的名稱}
+HostName {git主機名稱, 一般是github.com}
+User {使用者名稱}
+IdentityFile ~/.ssh/id_rsa_2
+IdentitiesOnly yes
