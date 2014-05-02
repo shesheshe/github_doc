@@ -1,0 +1,46 @@
+=====github 一主機多帳號=====
+
+windows環境 - win7
+
+1. 建立ssh密鑰, ssh-keygen -t rsa -C "{你的emil帳號}"
+
+2. 輸入你要存檔的檔名或是路徑
+
+3. 輸入密碼, 兩次
+
+4. 有多帳號, 則重複1~3.
+
+5. 到github或是其他git服務, 輸入id_rsa.pub中的ssh-key.
+
+6. 假如只使用一個帳號, 他會去讀取 C:\Users\{你的登入帳號}\.ssh\id_rsa, 或許你想使用2個以上帳號, 請繼續往下看.
+
+7. 在C:\Users\{你的登入帳號}\.ssh\下面, 建立config檔案. (沒有附檔名
+
+8. 輸入以下. (這僅顯示兩組帳號, 如需更多, 請自行新增.
+
+參數說明
+Host 		=> 你方便記憶的名稱
+HostName 	=> 目標伺服器
+User 		=> 使用者
+IdentityFile=> ssh檔案放置地點
+
+<pre>
+Host usera
+HostName github.com
+User ua
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+
+Host userb
+HostName github.com
+User ub
+IdentityFile ~/.ssh/id_rsa_ub
+IdentitiesOnly yes
+</pre>
+
+9. 之後要clone時, 請改成 
+<pre>
+	git clone git@usera:us/{專案名稱}.git
+</pre>
+
+=============================
