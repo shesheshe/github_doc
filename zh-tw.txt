@@ -84,3 +84,14 @@ git fetch {你的branch名稱}
 然後merge後, 就完成了. (假如沒有發生衝突的話...
 
 =============================
+
+=====github 將遠端倉庫還原成某版本=====
+
+git reset {--hard | --mixed | --soft} {commit_id}
+git push origin HEAD --force
+
+--mixed: 預設值, 保留修改的程式碼
+--soft: 只退回指定commit, 如有修改需commit
+--hard: 徹底退回指定commit
+
+=============================
